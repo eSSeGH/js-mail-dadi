@@ -38,7 +38,7 @@ let userDice = Math.floor(Math.random() * 6) + 1
 console.log("Il giocatore ha tirato:", userDice)
 
 let cpuDice = Math.floor(Math.random() * 6) + 1
-console.log("Il giocatore ha tirato:", cpuDice)
+console.log("Il computer ha tirato:", cpuDice)
 
 if (userDice>cpuDice) {
 
@@ -50,4 +50,76 @@ if (userDice>cpuDice) {
 
     alert("Hai PERSO! :'(")
 }
+
+// CARTA SASSO FORBICE
+
+const signs = ["carta", "sasso", "forbice"]
+
+
+let userValue = Math.floor(Math.random() * 3) + 1
+
+let cpuValue = Math.floor(Math.random() * 3) + 1
+
+
+let userSign = ""
+
+if (userValue === 1) {
+
+    userSign = signs[0]
+} else if (userValue === 2) {
+
+    userSign = signs[1]
+} else if (userValue === 3) {
+
+    userSign = signs[2]
+}
+
+console.log("Il giocatore ha giocato:", userSign)
+
+
+let cpuSign = ""
+
+if (cpuValue === 1) {
+
+    cpuSign = signs[0]
+} else if (cpuValue === 2) {
+
+    cpuSign = signs[1]
+} else if (cpuValue === 3) {
+
+    cpuSign = signs[2]
+}
+
+console.log("Il computer ha giocato:", cpuSign)
+
+
+if (userSign === signs[0] && cpuSign === signs[1]) {
+
+    console.log("HAI VINTO! GG :)")
+} else if (userSign === signs[1] && cpuSign === signs[2]) {
+
+    console.log("HAI VINTO! GG :)")
+} else if (userSign === signs[2] && cpuSign === signs[0]) {
+
+    console.log("HAI VINTO! GG :)")
+} else if (userSign === signs[1] && cpuSign === signs[0]) {
+
+    console.log("HAI PERSO! :'(")
+} else if (userSign === signs[2] && cpuSign === signs[1]) {
+
+    console.log("HAI PERSO! :'(")
+} else if (userSign === signs[0] && cpuSign === signs[2]) {
+
+    console.log("HAI PERSO! :'(")
+} else {
+
+    console.log("PAREGGIO")
+}
+
+
+
+
+
+
+
 
